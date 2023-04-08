@@ -11,7 +11,7 @@ jobs:
       
     - name: Run example action
       id: example_action_step
-      uses: ./.github/actions/example-action
+      uses: ./.github/actions/example-action/action.yml
       with:
         input1: 'Input 1 value'
         input2: 'Input 2 value'
