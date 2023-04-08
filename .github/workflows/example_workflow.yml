@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Run example action
         id: example_action_step
-        uses: actions/checkout@v2
+        uses: ./github-actions-test/.github/actions/example-actions/
         with:
           input1: 'Input 1 value'
           input2: 'Input 2 value'
