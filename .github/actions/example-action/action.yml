@@ -1,0 +1,22 @@
+name: 'Example Action'
+description: 'An example action that demonstrates inputs and outputs'
+inputs:
+  input1:
+    description: 'Input 1'
+    required: true
+  input2:
+    description: 'Input 2'
+    required: false
+    default: 'default_value'
+outputs:
+  output1:
+    description: 'Output 1'
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "Input 1: ${{ inputs.input1 }}" >> $GITHUB_ENV
+      shell: bash
+    - run: echo "Input 2: ${{ inputs.input2 }}" >> $GITHUB_ENV
+      shell: bash
+    - run: echo "::set-output name=output1::Output 1 value"
+      shell: bash
