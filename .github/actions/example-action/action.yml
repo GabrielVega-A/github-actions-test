@@ -1,5 +1,6 @@
-name: 'Example Action'
+name: Example Action
 description: 'An example action that demonstrates inputs and outputs'
+
 inputs:
   input1:
     description: 'Input 1'
@@ -8,9 +9,11 @@ inputs:
     description: 'Input 2'
     required: false
     default: 'default_value'
+    
 outputs:
   output1:
     description: 'Output 1'
+    
 runs:
   using: 'composite'
   steps:
