@@ -10,9 +10,6 @@ jobs:
     - name: step 1
       run: echo "This is step 1"
       id: step1
-      outputs:
-        myOutput: "Hello, World!"
-        
+      
     - name: Step 2
       run: echo "This is step 2 and the output from Step 1 is ${{ steps.step1.outputs.myOutput }}"
-      needs: step1
